@@ -16,3 +16,18 @@ h1 {
 .clicked {
   border-color: red;
 }
+
+table {
+  text-align: center;
+}
+
+th {
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+}

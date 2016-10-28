@@ -26,10 +26,14 @@ $(document).ready(function() {
     });
 
     function appendDom(empInfo) {
-      $('#container').append('<div class="person"></div>');
-      var $el = $('#container').children().last();
+      $('#tableContainer').append('<tr class="person"></tr>');
+      var $el = $('#tableContainer').children().last();
 
-      $el.append('<p>' + empInfo.employeefirstname + ' ' + empInfo.employeelastname + '</p>');
+      $el.append('<td>' + empInfo.employeefirstname + '</td>');
+      $el.append('<td>' + empInfo.employeelastname + '</td>');
+      $el.append('<td>' + empInfo.employeeID + '</td>');
+      $el.append('<td>' + empInfo.jobTitle + '</td>');
+      $el.append('<td>' + empInfo.annualSalary + '</td>')
     }
 
 
