@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // function calculateMonthlySalaries() {
     monthlySalary += parseInt(empInfo.annualSalary);
-      monthlySalary /= 12;
+      monthlySalary = Math.round(monthlySalary / 12);
       $('#salMonth').text(monthlySalary);
         console.log(monthlySalary);
     }
