@@ -1,5 +1,9 @@
 $(document).ready(function() {
     var array = [];
+    var monthlySalary = 0;
+
+
+
     $('#employeeinfo').on('submit', function(event) {
       event.preventDefault();
 
@@ -33,8 +37,16 @@ $(document).ready(function() {
       $el.append('<td>' + empInfo.employeelastname + '</td>');
       $el.append('<td>' + empInfo.employeeID + '</td>');
       $el.append('<td>' + empInfo.jobTitle + '</td>');
-      $el.append('<td>' + empInfo.annualSalary + '</td>')
+      $el.append('<td>' + empInfo.annualSalary + '</td>');
+      $el.append('<td id="deleteButton">' + '<input type="button" id="delete" name="delete" value="delete">' + '</td>');
+
+    // function calculateMonthlySalaries() {
+    monthlySalary += parseInt(empInfo.annualSalary);
+      monthlySalary /= 12;
+      $('#salMonth').text(monthlySalary);
+        console.log(monthlySalary);
     }
 
+// console.log(monthlySalary);
 
-});
+})
